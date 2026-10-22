@@ -1,0 +1,33 @@
+:root {
+  --bg: #0b0f17; --panel: #131a27; --line: #223049; --text: #e7edf7; --muted: #8b9ab3;
+  --accent: #3ddc97; --accent-ink: #04251a; --danger: #ff6b6b;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: radial-gradient(1200px 600px at 50% -10%, #16243d 0%, var(--bg) 60%); color: var(--text);
+  font: 16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, sans-serif; min-height: 100vh; }
+.shell { max-width: 640px; margin: 0 auto; padding: 48px 16px 32px; }
+header { text-align: center; margin-bottom: 28px; }
+.logo { font-size: 32px; font-weight: 700; letter-spacing: -0.02em; }
+.tag { color: var(--muted); margin: 8px auto 0; max-width: 460px; }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 16px; }
+h2 { margin: 0; }
+.muted { color: var(--muted); } .small { font-size: 13px; margin: 0; }
+.drop { border: 2px dashed var(--line); border-radius: 12px; padding: 32px 16px; text-align: center; cursor: pointer;
+  display: flex; flex-direction: column; gap: 4px; transition: border-color .15s; }
+.drop:hover { border-color: var(--accent); }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+label { display: flex; flex-direction: column; gap: 6px; font-size: 14px; color: var(--muted); }
+select, input[type=password] { background: #0e1522; color: var(--text); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; font: inherit; }
+button { background: var(--accent); color: var(--accent-ink); border: 0; border-radius: 10px; padding: 12px 18px; font: inherit; font-weight: 600; cursor: pointer; }
+button:disabled { opacity: .45; cursor: not-allowed; }
+button.ghost { background: transparent; color: var(--text); border: 1px solid var(--line); }
+button.danger { background: transparent; color: var(--danger); border: 1px solid var(--danger); }
+.row { display: flex; gap: 12px; }
+.linkbox { display: flex; gap: 8px; align-items: stretch; }
+.linkbox code { flex: 1; background: #0e1522; border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; word-break: break-all; font-size: 13px; }
+.error { color: var(--danger); margin: 0; }
+.bar { height: 6px; background: #0e1522; border-radius: 99px; overflow: hidden; }
+.bar > div { height: 100%; background: var(--accent); transition: width .2s; }
+footer { text-align: center; color: var(--muted); font-size: 12px; margin-top: 24px; }
+@media (max-width: 480px) { .grid { grid-template-columns: 1fr; } }

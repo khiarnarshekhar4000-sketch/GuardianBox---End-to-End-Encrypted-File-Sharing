@@ -1,0 +1,15 @@
+{
+  "name": "guardianbox",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Zero-knowledge, end-to-end encrypted file sharing",
+  "workspaces": ["backend", "frontend"],
+  "scripts": {
+    "dev:backend": "npm run dev -w backend",
+    "dev:frontend": "npm run dev -w frontend",
+    "build": "npm run build -w frontend",
+    "start": "npm start -w backend",
+    "test": "npm test -w frontend",
+    "prove": "node scripts/prove-encryption.mjs"
+  }
+}
